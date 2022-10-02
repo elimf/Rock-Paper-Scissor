@@ -40,7 +40,7 @@ const game = () => {
     player = player.toLowerCase();
     computer = computer.toLowerCase();
     if (player === computer) {
-      result.textContent = "Tie";
+      result.textContent = "Égalité";
     } else if (player == "pierre") {
       if (computer == "feuille") {
         result.textContent = "Manche perdue";
