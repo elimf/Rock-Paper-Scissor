@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width,
-                   initial-scale=1.0"
+      content="width=device-width, initial-scale=1.0"
     />
     <link rel="stylesheet" href="/style.css" />
     <title>Rock Paper Scissor</title>
   </head>
   <body>
     <section class="game">
-      <!--Title -->
-      <div class="title">Rock Paper Scissor</div>
+      <!-- Title -->
+      <div class="title">Pierre Papier Ciseaux</div>
 
-      <!--Display Score of player and computer -->
+      <!-- Display Score of player and computer -->
       <div class="score">
         <div class="playerScore">
           <h2>Vous</h2>
@@ -27,23 +26,23 @@
         </div>
       </div>
 
-      <div class="move">Choisissez </div>
+      <div class="move">Choisissez</div>
 
-      <!--Number of moves left before game ends -->
+      <!-- Number of moves left before game ends -->
       <div class="movesleft">Manches restante(s): 10</div>
 
-      <!--Options available to player to play game -->
+      <!-- Options available to player to play game -->
       <div class="options">
-        <button class="rock">Pierre</button>
-        <button class="paper">Feuille</button>
-        <button class="scissor">Ciseau</button>
+        <button class="rock" aria-label="Pierre">🪨</button>
+        <button class="paper" aria-label="Feuille">📄</button>
+        <button class="scissor" aria-label="Ciseau">✂️</button>
       </div>
 
-      <!--Final result of game -->
+      <!-- Final result of game -->
       <div class="result"></div>
 
-      <!--Reload the game -->
-      <button class="reload"></button>
+      <!-- Reload the game -->
+      <button class="reload">Rejouer</button>
     </section>
 
     <script src="app.js"></script>
