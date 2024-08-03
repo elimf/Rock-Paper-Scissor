@@ -3,7 +3,7 @@ const game = () => {
   let computerScore = 0;
   let moves = 0;
 
-  // Function to
+  // Function to play the game
   const playGame = () => {
     const rockBtn = document.querySelector(".rock");
     const paperBtn = document.querySelector(".paper");
@@ -22,10 +22,10 @@ const game = () => {
         const computerChoice = computerOptions[choiceNumber];
 
         // Function to check who wins
-        winner(this.innerText.toLowerCase(), computerChoice);
+        winner(this.value, computerChoice);
 
         // Calling gameOver function after 10 moves
-        if (moves == 10) {
+        if (moves === 10) {
           gameOver(playerOptions, movesLeft);
         }
       });
@@ -37,12 +37,11 @@ const game = () => {
     const result = document.querySelector(".result");
     const playerScoreBoard = document.querySelector(".p-count");
     const computerScoreBoard = document.querySelector(".c-count");
-    player = player.toLowerCase();
-    computer = computer.toLowerCase();
+
     if (player === computer) {
       result.textContent = "Égalité";
-    } else if (player == "pierre") {
-      if (computer == "feuille") {
+    } else if (player === "pierre") {
+      if (computer === "feuille") {
         result.textContent = "Manche perdue";
         computerScore++;
         computerScoreBoard.textContent = computerScore;
@@ -51,8 +50,8 @@ const game = () => {
         playerScore++;
         playerScoreBoard.textContent = playerScore;
       }
-    } else if (player == "ciseau") {
-      if (computer == "pierre") {
+    } else if (player === "ciseau") {
+      if (computer === "pierre") {
         result.textContent = "Manche perdue";
         computerScore++;
         computerScoreBoard.textContent = computerScore;
@@ -61,8 +60,8 @@ const game = () => {
         playerScore++;
         playerScoreBoard.textContent = playerScore;
       }
-    } else if (player == "feuille") {
-      if (computer == "ciseau") {
+    } else if (player === "feuille") {
+      if (computer === "ciseau") {
         result.textContent = "Manche perdue";
         computerScore++;
         computerScoreBoard.textContent = computerScore;
@@ -89,17 +88,18 @@ const game = () => {
 
     if (playerScore > computerScore) {
       result.style.fontSize = "2rem";
-      result.innerText = "Félicitationsvous avez gagné";
+      result.innerText = "Félicitations, vous avez gagné!";
       result.style.color = "#308D46";
     } else if (playerScore < computerScore) {
       result.style.fontSize = "2rem";
-      result.innerText = "Désolé vous avez perdu ";
+      result.innerText = "Désolé, vous avez perdu.";
       result.style.color = "red";
     } else {
       result.style.fontSize = "2rem";
       result.innerText = "Égalité";
       result.style.color = "grey";
     }
+
     reloadBtn.innerText = "Recommencer";
     reloadBtn.style.display = "flex";
     reloadBtn.addEventListener("click", () => {
