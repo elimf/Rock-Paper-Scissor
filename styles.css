@@ -14,7 +14,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  flex-direction: column;
+  flex-direction: row;
+  
 }
 
 .game {
@@ -150,3 +151,32 @@ body {
     margin-bottom: 1rem;
   }
 }
+
+.history-container {
+    margin: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .history-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+.history {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .history-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .history-list li {
+    margin-bottom: 5px;
+  }
+  
